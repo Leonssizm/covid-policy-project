@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "bpg-arial";
+  src: url(../fonts/bpg_arial_2009.ttf);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 97px 100px 100px 97px;
+  background-color: #eaeaea;
+}
+
+.header-wrapper {
+  display: Flex;
+  justify-content: space-between;
+}
+.line {
+  border: 1px solid black;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.personal-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+label {
+  margin-top: 47px;
+  padding: 0 0 10px 0;
+  font-family: bpg-arial;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  font-feature-settings: "cpsp" on;
+  color: #232323;
+}
+input {
+  padding: 5px;
+  border: 0.8px solid #232323;
+  width: 513px;
+  height: 50px;
+  background-color: #eaeaea;
+}
+hr {
+  margin-top: 104px;
+}
+.footer {
+  font-family: bg-arial;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #626262;
+}

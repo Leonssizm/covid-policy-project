@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "bpg-arial";
+  src: url(../fonts/bpg_arial_2009.ttf);
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+.start-questionnary-wrapper {
+  margin-top: 101px;
+  text-align: center;
+}
+.start-questionnary {
+  color: #232323;
+  text-decoration: none;
+  font-family: "bpg-arial";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
