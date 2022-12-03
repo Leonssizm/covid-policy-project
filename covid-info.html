@@ -5,18 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/covid-info.css">
+    <script src="./assets/scripts/covid-info.js" defer></script>
+
+    <title>Covid info</title>
 </head>
 
 <body>
-    <h1>Under construction</h1>
-    <style>
-        h1 {
-            display: Flex;
-            justify-content: center;
-            color: red;
-        }
-    </style>
+    <div class="header-wrapper">
+        <div class="header-image">
+            <img src="./assets/icons/Frame.svg" alt="redberry">
+        </div>
+        <div class="page-num">
+            <p>2/4</p>
+        </div>
+    </div>
+    <div class="line"></div>
+
+    <!-- Form -->
+    <div class="wrapper">
+        <div class="personal-info-wrapper">
+            <div class="input-control">
+
+                <label>გაქვს გადატანილი Covid-19?*</label><br>
+
+                <input type="radio" name="covid" value="covid-yes"
+                    onclick="showAntibodiesQuestion(`yes`)">კი</input><br>
+                <input type="radio" name="covid" value="covid-no" onclick="showAntibodiesQuestion(`no`)">არა</input><br>
+                <input type="radio" name="covid" value="covid-no" onclick="showAntibodiesQuestion(`no`)">ახლა
+                მაქვს</input>
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="input-control" id="antibodies-test-modal">
+                <label>ანტისხეულების ტესტი გაქვს გაკეთებული?*</label><br>
+                <input type="radio" name="antibodies" value="antibodies-yes" id="antiBodiesTestYes">კი</input><br>
+                <input type="radio" name="antibodies" value="antibodies-no" id="antiBodiesTestNo">არა</input><br>
+            </div>
+            <div class="input-control" id="testDate-amountOfAntibodies">
+                <label>თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა*</label><br>
+                <input type="text"><br>
+                <input type="text"><br>
+            </div>
+            <div class="input-control" id="covidDate">
+                <label>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</label><br>
+                <input type="date" onclick=""><br>
+            </div>
+        </div>
+        <div class="picture-wrapper">
+
+        </div>
+    </div>
 </body>
 
 </html>

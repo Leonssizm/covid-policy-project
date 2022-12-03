@@ -13,10 +13,11 @@ body {
 .header-wrapper {
   display: Flex;
   justify-content: space-between;
+  align-items: center;
 }
 .page-num {
   margin: 0;
-  font-family: "Anonymous Pro";
+  font-family: "bpg-arial";
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
