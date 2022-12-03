@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/personal-info.css">
+    <script src="./assets/scripts/validations.js" defer></script>
+    <script src="./assets/scripts/personal-info.js" defer></script>
     <title>Personal Information</title>
 </head>
 
@@ -23,12 +25,21 @@
     <!-- Form -->
     <div class="wrapper">
         <div class="personal-info-wrapper">
-            <label>სახელი*</label>
-            <input type="text" placeholder="იოსებ">
-            <label>გვარი*</label>
-            <input type="text" placeholder="ჯუღაშვილი">
-            <label>მეილი*</label>
-            <input type="text" placeholder="fbi@redberry.ge">
+            <div class="input-control">
+                <label>სახელი*</label>
+                <input type="text" placeholder="იოსებ" id="nameInput">
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="input-control">
+                <label>გვარი*</label>
+                <input type="text" placeholder="ჯუღაშვილი" id="lastnameInput">
+                <div class="error" id="lastnameError"></div>
+            </div>
+            <div class="input-control">
+                <label>მეილი*</label>
+                <input type="text" placeholder="fbi@redberry.ge" id="emailInput">
+                <div class="error" id="emailError"></div>
+            </div>
             <footer class="footer">
                 <hr>
                 <p>*ით აღნიშნული ველის შევსება <br> სავალდებულოა</p>
@@ -38,6 +49,10 @@
             <img src="./assets/images/scan2.png" alt="people">
         </div>
     </div>
+    <div class="pagination">
+        <a href="#" id="toCovidInfo"><img src="./assets/icons/nextPageArr.svg" alt="arrow"></a>
+    </div>
+
 
 </body>
 

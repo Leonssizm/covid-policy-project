@@ -14,6 +14,14 @@ body {
   display: Flex;
   justify-content: space-between;
 }
+.page-num {
+  margin: 0;
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #232323;
+}
 .line {
   border: 1px solid black;
 }
@@ -50,8 +58,33 @@ hr {
 .footer {
   font-family: bg-arial;
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: #626262;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+/* validations */
+.error {
+  font-family: bg-arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+.input-control.error {
+  color: #ff3860;
+  font-size: 15px;
+}
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+#nameError,
+#lastnameError,
+#emailError {
+  color: #f15524;
+  margin: 6px 0 0 19px;
 }
