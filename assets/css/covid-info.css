@@ -26,6 +26,58 @@ body {
 .line {
   border: 1px solid black;
 }
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.covid-question,
+.antibodies-question {
+  margin-top: 42px;
+  font-family: "bpg-arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #232323;
+}
+.covid-question input,
+.antibodies-question input {
+  margin: 19px 19px 0px 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+}
+.antibodies-input-wrapper,
+.covid-date-wrapper {
+  margin-top: 47px;
+}
+.antibodies-input,
+.covid-date-calendar {
+  margin-top: 25px;
+  padding: 5px;
+  border: 0.8px solid #232323;
+  width: 513px;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.antibodies-input-label,
+.covid-date-label {
+  margin-top: 47px;
+  padding: 0 0 10px 0;
+  font-family: bpg-arial;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  font-feature-settings: "cpsp" on;
+  color: #232323;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 /* modals & radio Buttons */
 
@@ -33,4 +85,8 @@ body {
 #testDate-amountOfAntibodies,
 #covidDate {
   display: none;
+}
+input[name="covid"],
+input[name="antibodies"] {
+  accent-color: #232323;
 }
