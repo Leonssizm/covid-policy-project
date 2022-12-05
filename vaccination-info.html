@@ -5,20 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="./assets/css/vaccination-info.css">
+    <script src="./assets/scripts/vaccination-info.js" defer></script>
     <title>Vaccination</title>
 </head>
 
 <body>
-    <h1>Under Construction</h1>
+    <div class="header-wrapper">
+        <div class="header-image">
+            <img src="./assets/icons/Frame.svg" alt="redberry">
+        </div>
+        <div class="page-num">
+            <p>3/4</p>
+        </div>
+    </div>
+    <div class="line"></div>
 
-    <style>
-        h1 {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    <!-- Form -->
+    <div class="wrapper">
+        <div class="personal-info-wrapper">
+            <div class="vaccination-question" id="vaccination-modal">
+                <label id="vaccination-question-label">უკვე აცრილი ხარ?*</label><br>
+                <input type="radio" name="vaccination" value="vaccination-yes"
+                    onclick="showVaccinationStage(`yes`)">კი</input><br>
+                <input type="radio" name="vaccination" value="vaccination-no"
+                    onclick="showVaccinationStage(`no`)">არა</input><br>
+            </div>
+
+            <div class="vaccination-stage-question" id="vaccination-stage">
+                <label id="covid-question-label">აირჩიე რა ეტაპზე ხარ*</label><br>
+                <input type="radio" name="vaccination-stage" value="vaccination-stage=1"
+                    onclick="showVaccinationRegInfo('no')">პირველი დოზა და რეგისტრირებული
+                ვარ მეორეზე</input><br>
+                <input type="radio" name="vaccination-stage" value="vaccination-stage-2"
+                    onclick="showVaccinationRegInfo('no')">სრულად აცრილი ვარ</input><br>
+                <input type="radio" name="vaccination-stage" value="vaccination-stage-0"
+                    onclick="showVaccinationRegInfo('yes')">პირველი დოზა და არ
+                დავრეგისტრირებულვარ მეორეზე</input>
+            </div>
+
+            <div class="vaccination-stage-question" id="vaccination-refusal">
+                <label id="refusal-question-label">რას ელოდები?*</label><br>
+                <input type="radio" name="vaccination-refusal" value="vaccination-refusal=1"
+                    onclick="displayVaccinationInfo('')">დარეგისტრირებული ვარ და
+                ველოდები რიცხვს</input><br>
+                <input type="radio" name="vaccination-refusal" value="vaccination-refusal-2"
+                    onclick="displayVaccinationInfo('link')">არ ვგეგმავ</input><br>
+                <input type="radio" name="vaccination-refusal" value="vaccination-refusal-0"
+                    onclick="displayVaccinationInfo('condition')">გადატანილი მაქვს და ვგეგმავ
+                აცრას</input>
+            </div>
+
+            <div class="vaccination-info" id="registration-info">
+                <p>რომ არ გადადო, <br>
+                    ბარემ ახლავე დარეგისტრირდი<br>
+                    <a href="https://booking.moh.gov.ge/" target="_blank">https://booking.moh.gov.ge/</a>
+                </p>
+            </div>
+            <div class="vaccination-info-link" id="registration-info-link">
+                <a href="https://booking.moh.gov.ge/" target="_blank">
+                    <p>👉 https://booking.moh.gov.ge/</p>
+                </a>
+                </p>
+            </div>
+            <div class="vaccination-info" id="registration-info-condition">
+                <p>ახალი პროტოკოლით კოვიდის გადატანიდან <br>
+                    1 თვის შემდეგ შეგიძლიათ ვაქცინის გაკეთება. <br>
+                    <br>
+                    👉 რეგისტრაციის ბმული
+                    <br>
+                    <a href="https://booking.moh.gov.ge/" target="_blank">
+                        https://booking.moh.gov.ge/</a>
+                </p>
+            </div>
+
+        </div>
+        <div class="picture-wrapper">
+            <img src="./assets/images/doctor2.png" alt="vaccinate">
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="./covid-info.html"><img src="./assets/icons/previousPageArr.svg" alt="prevPage"></a>
+        <a href="#" id="toWorkPolicyInfo"><img src="./assets/icons/nextPageArr.svg" alt="nextPage"></a>
+    </div>
+    </div>
 </body>
 
 </html>
