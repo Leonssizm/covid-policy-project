@@ -26,23 +26,22 @@
     <div class="wrapper">
         <div class="personal-info-wrapper">
 
-            <div class="input-control covid-question" id="hadCovidQuestion">
+            <div class="covid-question" id="hadCovidQuestion">
                 <label id="covid-question-label">გაქვს გადატანილი Covid-19?*</label><br>
                 <input type="radio" name="covid" value="covid-yes"
                     onclick="showAntibodiesQuestion(`yes`)">კი</input><br>
                 <input type="radio" name="covid" value="covid-no" onclick="showAntibodiesQuestion(`no`)">არა</input><br>
                 <input type="radio" name="covid" value="covid-no" onclick="showAntibodiesQuestion(`no`)">ახლა
                 მაქვს</input>
-                <div class="error" id="nameError"></div>
             </div>
 
-            <div class="input-control antibodies-question" id="antibodies-test-modal">
+            <div class="antibodies-question" id="antibodies-test-modal">
                 <label id="antibodies-question-label">ანტისხეულების ტესტი გაქვს გაკეთებული?*</label><br>
                 <input type="radio" name="antibodies" value="antibodies-yes" id="antiBodiesTestYes">კი</input><br>
                 <input type="radio" name="antibodies" value="antibodies-no" id="antiBodiesTestNo">არა</input><br>
             </div>
 
-            <div class="input-control antibodies-input-wrapper" id="testDate-amountOfAntibodies">
+            <div class="antibodies-input-wrapper" id="testDate-amountOfAntibodies">
                 <label class="antibodies-input-label">თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და
                     ანტისხეულების რაოდენობა*</label><br>
                 <input type="text" name="covidPositiveDate" placeholder="რიცხვი" onfocus="(this.type='date')"
@@ -51,7 +50,7 @@
                     placeholder="ანტისხეულების რაოდენობა" id="antibodies-amount"><br>
             </div>
 
-            <div class="input-control covid-date-wrapper" id="covidDate">
+            <div class="covid-date-wrapper" id="covidDate">
                 <label class="covid-date-label">მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა
                     Covid-19*</label><br>
                 <input type="text" name="covidPositiveDate" placeholder="დდ/თთ/წწ" onfocus="(this.type='date')"

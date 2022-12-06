@@ -43,3 +43,35 @@ body {
   line-height: 27px;
   color: #232323;
 }
+
+/* Radio Buttons */
+input[name="meeting"],
+input[name="workdays"] {
+  accent-color: #232323;
+}
+
+.meetings,
+.workDays {
+  margin: 35px 0 0 36px;
+  font-family: "bpg-arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #232323;
+}
+.meetings label,
+.workDays label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+.meetings input,
+.workDays input {
+  margin: 19px 19px 0px 20px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+}
