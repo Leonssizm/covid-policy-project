@@ -47,8 +47,8 @@ nextPage.addEventListener("click", () => {
   let hadCovid = "";
   let hadAntiBodiesTest;
   if (validateInputs()) {
-    if (hadCovidRadioButtons[0].checked) hadCovid = "Yes";
-    else if (hadCovidRadioButtons[1].checked) hadCovid = "No";
+    if (hadCovidRadioButtons[0].checked) hadCovid = "yes";
+    else if (hadCovidRadioButtons[1].checked) hadCovid = "no";
     else hadCovid = "have_right_now";
 
     if (antibodiesRadioButtons[0].checked) hadAntiBodiesTest = true;
@@ -64,6 +64,7 @@ nextPage.addEventListener("click", () => {
             test_date: covidTestDate.value,
             number: antibodiesAmount.value,
           },
+          had_covid_at: covidDateInput.value,
         })
       );
       window.location.href = "./vaccination-info.html";

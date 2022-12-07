@@ -35,8 +35,8 @@ submitFormButton.addEventListener("click", () => {
         JSON.stringify({
           non_formal_meetings: amountOfWeeklyMeetings,
           number_of_days_from_office: numberOfDaysFromOffice,
-          hat_about_meetings_in_live: liveMeetings.value,
-          ell_us_your_opinion_about_us: suggestions.value,
+          what_about_meetings_in_live: liveMeetings.value,
+          tell_us_your_opinion_about_us: suggestions.value,
         })
       );
       window.location.href = "./thanks.html";

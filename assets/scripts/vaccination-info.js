@@ -71,17 +71,18 @@ nextPageBtn.addEventListener("click", () => {
     if (vaccinationRadioButtons[0].checked) vaccinated = true;
     else vaccinated = false;
 
-    if (vaccinationStageRadioButtons[0].checked)
-      vaccinationStage = "first_dosage_and_registered_on_the_second";
-    else if (vaccinationStageRadioButtons[1].checked)
-      vaccinationStage = "fully_vaccinated";
-    else vaccinationStage = "first_dosage_and_not_registered_yet";
-
     if (vaccinationRefusalRadioButtons[0].checked)
       refusalReasoning = "registered_and_waiting";
     else if (vaccinationRefusalRadioButtons[1].checked)
       refusalReasoning = "not_planning";
     else refusalReasoning = "had_covid_and_planning_to_be_vaccinated";
+
+    if (vaccinationStageRadioButtons[0].checked)
+      vaccinationStage = "first_dosage_and_registered_on_the_second";
+    else if (vaccinationStageRadioButtons[1].checked)
+      vaccinationStage = "fully_vaccinated";
+    else if (vaccinationStageRadioButtons[2].checked)
+      vaccinationStage = "first_dosage_and_not_registered_yet";
     setTimeout(() => {
       window.localStorage.setItem(
         "vaccination-info",
