@@ -96,5 +96,8 @@ input[name="vaccination-refusal"] {
 }
 .pagination {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+#toWorkPolicyInfo {
+  margin-left: 117px;
 }

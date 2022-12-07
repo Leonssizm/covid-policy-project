@@ -84,7 +84,10 @@ body {
 
 .pagination {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+#toVaccinationInfo {
+  margin-left: 117px;
 }
 
 /* modals & radio Buttons */

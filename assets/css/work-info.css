@@ -75,3 +75,53 @@ input[name="workdays"] {
   border-radius: 50%;
   background-color: #eaeaea;
 }
+.assambly-input-wrapper,
+.suggestions-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.assambly-input-wrapper input,
+.suggestions-input-wrapper input {
+  padding: 5px;
+  margin: 20px 0 0 36px;
+  border: 0.8px solid #232323;
+  width: 622px;
+  height: 184px;
+  background-color: #eaeaea;
+}
+.assambly-input-wrapper label,
+.suggestions-input-wrapper label {
+  margin: 35px 0 0 36px;
+  padding: 0 0 10px 0;
+  font-family: "bpg-arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #232323;
+}
+.submit-button-wrapper {
+  margin-top: 54px;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-button-wrapper button {
+  width: 180px;
+  height: 56px;
+  border: 0;
+  background: #208298;
+  border-radius: 42px;
+  font-family: "bpg-arial";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.pagination {
+  display: flex;
+  margin-top: 91px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
