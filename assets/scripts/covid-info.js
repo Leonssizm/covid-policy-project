@@ -129,3 +129,33 @@ function validateInputs() {
   }
   return formIsValid;
 }
+
+// display values when returning to this page
+
+function displayDataFromLocalStorage() {
+  let covidInfo = JSON.parse(localStorage.getItem("covid-info"));
+  if (localStorage.getItem("covid-info")) {
+    if (covidInfo.had_covid === "no") {
+      hadCovidRadioButtons[1].checked = true;
+    } else if (covidInfo.had_covid === "have_right_now") {
+      hadCovidRadioButtons[2].checked = true;
+    } else {
+      hadCovidRadioButtons[0].checked = true;
+      antibodiesModalElement.style.display = "block";
+
+      if (covidInfo.antibodies.test_date && covidInfo.had_antibody_test) {
+        antibodiesRadioButtons[0].checked = true;
+        document.getElementById("testDate-amountOfAntibodies").style.display =
+          "block";
+        covidTestDate.value = covidInfo.antibodies.test_date;
+        antibodiesAmount.value = covidInfo.antibodies.number;
+      } else if (!covidInfo.had_antibody_test) {
+        antibodiesRadioButtons[1].checked = true;
+        document.getElementById("covidDate").style.display = "block";
+        covidDateInput.value = covidInfo.had_covid_at;
+      }
+    }
+  } else {
+    return;
+  }
+}

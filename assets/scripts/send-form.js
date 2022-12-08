@@ -3,6 +3,16 @@ let personalInfo = JSON.parse(localStorage.getItem("personal-info"));
 let covidInfo = JSON.parse(localStorage.getItem("covid-info"));
 let policyInfo = JSON.parse(localStorage.getItem("policy-info"));
 
+const covidSicknessDateConverted = covidInfo.had_covid_at
+  .split("-")
+  .reverse()
+  .join("/");
+
+const antiobidesTestDateConverted = covidInfo.antibodies.test_date
+  .split("-")
+  .reverse()
+  .join("/");
+
 function sendData() {
   fetch("https://covid19.devtest.ge/api/create", {
     method: "POST",
@@ -11,15 +21,15 @@ function sendData() {
       last_name: personalInfo.last_name,
       email: personalInfo.email,
       had_covid: covidInfo.had_covid,
-      had_antibodies_test: covidInfo.had_antibodies_test,
-      ...(covidInfo.had_antibodies_test && {
+      had_antibody_test: covidInfo.had_antibody_test,
+      ...(covidInfo.had_antibody_test && {
         antibodies: {
-          test_date: covidInfo.antibodies.test_date,
-          number: parseInt(covidInfo.number),
+          test_date: antiobidesTestDateConverted,
+          number: covidInfo.antibodies.number,
         },
       }),
       ...(covidInfo.had_covid_at && {
-        had_covid_at: covidInfo.had_covid_at,
+        covid_sickness_date: covidSicknessDateConverted,
       }),
       had_vaccine: vaccinationInfo.had_vaccine,
       ...(vaccinationInfo.had_vaccine && {
@@ -42,5 +52,9 @@ function sendData() {
     },
   }).then((response) => {
     console.log(response);
+
+    if (response.status === 201) {
+      localStorage.clear();
+    }
   });
 }
