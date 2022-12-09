@@ -23,6 +23,9 @@ body {
   line-height: 40px;
   color: #232323;
 }
+.page-num p {
+  margin: 20px;
+}
 .line {
   border: 1px solid black;
 }

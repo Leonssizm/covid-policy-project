@@ -142,3 +142,38 @@ function validateInputs() {
 
   return formIsValid;
 }
+
+function displayDataFromLocalStorage() {
+  let vaccinationInfo = JSON.parse(localStorage.getItem("vaccination-info"));
+
+  if (localStorage.getItem("vaccination-info")) {
+    if (vaccinationInfo.had_vaccine) {
+      vaccinationRadioButtons[0].checked = true;
+      vaccinationStageQuestion.style.display = "block";
+      if (
+        vaccinationInfo.vaccination_stage ===
+        "first_dosage_and_registered_on_the_second"
+      ) {
+        vaccinationStageRadioButtons[0].checked = true;
+      } else if (vaccinationInfo.vaccination_stage === "fully_vaccinated") {
+        vaccinationStageRadioButtons[1].checked = true;
+      } else {
+        vaccinationStageRadioButtons[2].checked = true;
+        vaccinationRegInfo.style.display = "block";
+      }
+    } else {
+      vaccinationRadioButtons[1].checked = true;
+      vaccinationRefusalModal.style.display = "block";
+
+      if (vaccinationInfo.refusalReasoning === "registered_and_waiting") {
+        vaccinationRefusalRadioButtons[0].checked = true;
+      } else if (vaccinationInfo.refusalReasoning === "not_planning") {
+        vaccinationRefusalRadioButtons[1].checked = true;
+        registrationLink.style.display = "block";
+      } else {
+        vaccinationRefusalRadioButtons[2].checked = true;
+        registrationConditions.style.display = "block";
+      }
+    }
+  }
+}

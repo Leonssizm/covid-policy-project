@@ -78,3 +78,38 @@ function validateInputs() {
 
   return formIsValid;
 }
+
+function displayDataFromLocalStorage() {
+  let policyInfo = JSON.parse(localStorage.getItem("policy-info"));
+
+  if (localStorage.getItem("policy-info")) {
+    if (policyInfo.non_formal_meetings === "twice_a_week") {
+      meetingsRadioButtons[0].checked = true;
+    } else if (policyInfo.non_formal_meetings === "once_a_week") {
+      meetingsRadioButtons[1].checked = true;
+    } else if (policyInfo.non_formal_meetings === "once_in_a_two_weeks") {
+      meetingsRadioButtons[2].checked = true;
+    } else {
+      meetingsRadioButtons[3].checked = true;
+    }
+
+    if (policyInfo.number_of_days_from_office === 0)
+      workdaysRadioButtons[0].checked = true;
+    else if (policyInfo.number_of_days_from_office === 1)
+      workdaysRadioButtons[1].checked = true;
+    else if (policyInfo.number_of_days_from_office === 2)
+      workdaysRadioButtons[2].checked = true;
+    else if (policyInfo.number_of_days_from_office === 3)
+      workdaysRadioButtons[3].checked = true;
+    else if (policyInfo.number_of_days_from_office === 4)
+      workdaysRadioButtons[4].checked = true;
+    else workdaysRadioButtons[5].checked = true;
+  }
+
+  if (policyInfo.tell_us_your_opinion_about_us) {
+    suggestions.value = policyInfo.tell_us_your_opinion_about_us;
+  }
+  if (policyInfo.what_about_meetings_in_live) {
+    liveMeetings.value = policyInfo.what_about_meetings_in_live;
+  }
+}
