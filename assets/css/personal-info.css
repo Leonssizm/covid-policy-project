@@ -26,7 +26,7 @@ body {
   margin: 20px;
 }
 .line {
-  border: 1px solid black;
+  border-bottom: 1.8px solid #232323;
 }
 .wrapper {
   display: flex;
@@ -55,8 +55,10 @@ input {
   height: 50px;
   background-color: #eaeaea;
 }
-hr {
+.split-line {
   margin-top: 104px;
+  width: 237px;
+  border-bottom: 0.8px solid #000000;
 }
 .footer {
   font-family: "bpg-arial";
@@ -91,3 +93,11 @@ hr {
   color: #f15524;
   margin: 6px 0 0 19px;
 }
+/* under construction */
+
+/* #picture {
+  background-image: url(../images/bike2\ 1.png);
+  background-position: center;
+  background-size: 200px 400px;
+  background-repeat: no-repeat;
+} */

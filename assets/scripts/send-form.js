@@ -11,7 +11,7 @@ const covidSicknessDateConverted = covidInfo.had_covid_at
 const antiobidesTestDateConverted = covidInfo.antibodies.test_date
   .split("-")
   .reverse()
-  .join("/");
+  .join("-");
 
 function sendData() {
   fetch("https://covid19.devtest.ge/api/create", {
@@ -55,6 +55,11 @@ function sendData() {
 
     if (response.status === 201) {
       localStorage.clear();
+      // display lil star animation
+      let firstStar = document.getElementById("firstStar");
+      let secondStar = document.getElementById("secondStar");
+      firstStar.classList.add("firstStarAnimation");
+      secondStar.classList.add("secondStarAnimation");
     }
   });
 }

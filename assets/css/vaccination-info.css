@@ -26,7 +26,7 @@ body {
   margin: 20px;
 }
 .line {
-  border: 1px solid black;
+  border-bottom: 1.8px solid #232323;
 }
 .wrapper {
   display: flex;

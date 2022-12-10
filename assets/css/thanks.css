@@ -12,6 +12,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.firstStar {
+  margin-right: 300px;
+  margin-bottom: 80px;
+  display: none;
 }
 h1 {
   font-family: "bpg-arial";
@@ -20,6 +26,78 @@ h1 {
   font-size: 64px;
   line-height: 77px;
   letter-spacing: 0.24em;
-
+  position: fixed;
   color: #ffffff;
+}
+.secondStar {
+  margin-left: 300px;
+  margin-top: 80px;
+  display: none;
+}
+.firstStarAnimation {
+  animation-name: sizeChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  display: block;
+}
+.secondStarAnimation {
+  animation-name: changeSize;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  display: block;
+}
+@keyframes sizeChange {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 0.2;
+  }
+  25% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+  }
+  50% {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+  }
+  75% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+    opacity: 0.2;
+  }
+}
+
+@keyframes changeSize {
+  0% {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+  }
+  25% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+  }
+  50% {
+    width: 15px;
+    height: 15px;
+    opacity: 0.2;
+  }
+  75% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+  }
 }
