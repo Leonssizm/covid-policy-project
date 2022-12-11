@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 97px 100px 100px 97px;
+  padding: 60px 100px 60px 97px;
   background-color: #eaeaea;
 }
 
@@ -112,7 +112,7 @@ input[name="antibodies"] {
   animation-iteration-count: 1;
   display: block;
   background-image: url(../images/red-highlight-removebg-preview.png);
-  background-position: left 110px top 260px;
+  background-position: left 40px top 230px;
   background-size: 200px 200px;
   background-repeat: no-repeat;
 }
@@ -124,6 +124,6 @@ input[name="antibodies"] {
   }
   to {
     background-size: 200px 200px;
-    background-position: left 110px top 260px;
+    background-position: left 40px top 230px;
   }
 }

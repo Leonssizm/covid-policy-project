@@ -68,6 +68,7 @@ input {
   color: #626262;
 }
 .pagination {
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }
