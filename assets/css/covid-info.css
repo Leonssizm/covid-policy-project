@@ -103,3 +103,27 @@ input[name="covid"],
 input[name="antibodies"] {
   accent-color: #232323;
 }
+
+/* animation */
+
+.pictureAnimation {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  display: block;
+  background-image: url(../images/red-highlight-removebg-preview.png);
+  background-position: left 110px top 260px;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+}
+
+@keyframes appear {
+  from {
+    background-position: center top 125px;
+    background-size: 80px 80px;
+  }
+  to {
+    background-size: 200px 200px;
+    background-position: left 110px top 260px;
+  }
+}

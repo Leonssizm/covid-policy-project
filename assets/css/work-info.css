@@ -36,7 +36,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.picture-wrapper {
+  margin-top: 10px;
+}
 .info p {
   margin: 35px 0 0 36px;
   font-family: "bpg-arial";
@@ -126,4 +128,27 @@ input[name="workdays"] {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+/* animation */
+.pictureAnimation {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  display: block;
+  background-image: url(../images/heart-highlight.png);
+  background-position: top 50px left 90px;
+  background-size: 210px 210px;
+  background-repeat: no-repeat;
+}
+
+@keyframes appear {
+  from {
+    background-position: top -10px left 20px;
+    background-size: 50px 50px;
+  }
+  to {
+    background-size: 210px 210px;
+    background-position: top 50px left 90px;
+  }
 }

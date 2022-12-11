@@ -104,7 +104,4 @@ function displayDataFromLocalStorage() {
   } else {
     return;
   }
-
-  // Display animation
-  const picture = document.getElementById("picture-wrapper");
 }

@@ -158,4 +158,10 @@ function displayDataFromLocalStorage() {
   } else {
     return;
   }
+
+  // display animation
+
+  const picture = document.getElementById("temperature-picture");
+
+  picture.classList.add("pictureAnimation");
 }
