@@ -59,7 +59,9 @@ nextPage.addEventListener("click", () => {
         "covid-info",
         JSON.stringify({
           had_covid: hadCovid,
-          had_antibody_test: hadAntiBodiesTest,
+          ...(hadCovid === "yes" && {
+            had_antibody_test: hadAntiBodiesTest,
+          }),
           antibodies: {
             test_date: covidTestDate.value,
             number: antibodiesAmount.value,
@@ -158,10 +160,4 @@ function displayDataFromLocalStorage() {
   } else {
     return;
   }
-
-  // display animation
-
-  const picture = document.getElementById("temperature-picture");
-
-  picture.classList.add("pictureAnimation");
 }
